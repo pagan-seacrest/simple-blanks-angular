@@ -1,0 +1,119 @@
+@mixin btshader {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    padding: 5px 12px;
+    &:first-child, &:last-child {
+        border-radius: 7px;
+    }
+    &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    transition: background-color, .4s;
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+    
+}
+
+.todos {
+    width: 75%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    border-radius: 7px;
+    position: relative;
+    min-height: 160px;
+}
+.todos form {
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 32%;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    & * {
+        outline: none;
+        border: none;
+    }
+    & .todo-input {
+        width: 300px;
+    }
+    & input {
+        border: none;
+        outline: none;
+        color: #fff;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        padding: 5px 12px;
+        &:first-child, &:last-child {
+            border-radius: 7px;
+        }
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        transition: background-color, .4s;
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}
+
+.todo {
+    margin: 0 10px;
+    width: 318px;
+    height: 120px;
+    border: 1px solid black;
+    position: relative;
+    border-radius: 7px;
+    background-color: rgba($color: #000000, $alpha: .6);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    font-size: 20px;
+}
+
+.done {
+    background-color: rgba($color: #640000, $alpha: .6);
+    & .content {text-decoration: line-through;}
+}
+
+.bt-remove {
+    align-self: stretch;
+    @include btshader();
+}
+
+.id {
+    align-self: flex-start;
+    @include btshader();
+    &:first-child, &:last-child {
+        border-radius: 7px;
+    }
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

@@ -1,0 +1,13 @@
+<form class="modal">
+    <header class="modal__title">
+        <h3>Modify Blank</h3>
+    </header>
+    <div class="modal__fields">
+        <input placeholder="Update title" type="text">
+        <textarea placeholder="Update content" cols="30" rows="10"></textarea>
+    </div>
+    <div class="panel-bar">
+        <button (click)="handleUpdate()" class="panel-bar__bt" type="button">Update</button>
+        <button (click)="handleClose()" class="panel-bar__bt" type="button">Cancel</button>
+    </div>
+</form>
